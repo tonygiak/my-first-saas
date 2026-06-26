@@ -1,7 +1,6 @@
 import Link from "next/link";
 const ButtonLogin = (props) => {
   const { isLoggedIn, name, extraStyle } = props;
-  console.log(extraStyle);
 
   if (isLoggedIn) {
     return (
