@@ -1,6 +1,8 @@
 import ButtonLogin from "@/components/ButtonLogin";
 import CheckIcon from "@/components/CheckIcon";
 import FAQItem from "@/components/FAQItem";
+import Image from "next/image";
+import productDemo from "./productDemo.jpeg";
 
 export default function Home() {
   const isLoggedIn = true;
@@ -33,7 +35,7 @@ export default function Home() {
     <main>
       {/* Header */}
       <section className="bg-base-200">
-        <div className="max-w-3xl mx-auto flex justify-between items-center p-4">
+        <div className="max-w-5xl mx-auto flex justify-between items-center p-4">
           <div className="text-2xl font-bold">CodeFastSaas</div>
           <div className="space-x-4 max-md:hidden">
             <a href="#pricing" className="btn btn-ghost">
@@ -54,15 +56,22 @@ export default function Home() {
         </div>
       </section>
       {/* Hero Section */}
-      <section className="text-center py-32 px-8 max-w-3xl mx-auto">
-        <h1 className="text-4xl lg:text-5xl font-extrabold mb-6">
-          Collect customer feedback to build better products
-        </h1>
-        <div className="opacity-90 mb-10">
-          Create a feedback board in minutes, prioritize features, and build
-          products your customers will love.
+      <section className="text-center lg:text-left py-32 px-8 max-w-5xl mx-auto flex flex-col lg:flex-row gap-14 items-center lg:items-start">
+        <Image
+          src={productDemo}
+          alt="Product Demo"
+          className="w-96 rounded-xl"
+        />
+        <div>
+          <h1 className="text-4xl lg:text-5xl font-extrabold mb-6">
+            Collect customer feedback to build better products
+          </h1>
+          <div className="opacity-90 mb-10">
+            Create a feedback board in minutes, prioritize features, and build
+            products your customers will love.
+          </div>
+          <ButtonLogin isLoggedIn={isLoggedIn} name={name} />
         </div>
-        <ButtonLogin isLoggedIn={isLoggedIn} name={name} />
       </section>
       {/* Pricing Section */}
       <section className="bg-base-200" id="pricing">
