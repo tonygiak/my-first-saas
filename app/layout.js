@@ -13,8 +13,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="cupcake" className="scroll-smooth">
       <body className={inter.className}>
-        <SpeedInsights />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
